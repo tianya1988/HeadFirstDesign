@@ -38,8 +38,8 @@ public class WeatherData extends Observable {
     private void measurementsChanged() {
         //package java.util.Observable的方法;
         setChanged();
-        notifyObservers();//观察者拉取
-//        notifyObservers("the data push to observers");//主题推送
+        notifyObservers();//当主题状态发生变化，观察者拉取主题中内容
+//        notifyObservers("the data push to observers");//主题可以推送具体的内容给观察者
     }
 
     public float getTemperature() {
